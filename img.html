@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>이미지</title>
+        <style>
+            img{
+                width: 20%;
+                height: 20%;
+            }
+            figure{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>하이퍼링크 삽입</h1>
+        <a href="index.html" target="_blank" title="첫페이지로 이동">메인페이지</a>
+        <a href="img/레드향.jpg" download>이미지 다운로드</a>
+        <h1><a href="https://www.daum.net" title="다음으로 이동" target="_blank">이미지 삽입</a></h1>
+        <figure>
+            <a href="https://www.naver.com" title="네이버로 이동" ><img src="img/레드향.jpg" alt="레드향" ></a>
+            <img src="img/사과.jpg" alt="사과" >
+            <img src="img/블루베리.jpg" alt="블루베리" >
+            <figcaption>맛있는 과일들</figcaption>
+        </figure>
+        <h1>멀티미디어 삽입</h1>
+        <audio src="media/미소속에비친그대.mp3" controls></audio>
+        <video src="media/사랑한다사랑해.mp4" controls width="600" height="200"></video>
+        <h1>외부파일 삽입</h1>
+        <object data="1. HTML(구조텍스트목록표).pdf" width="400" height="200"></object>
+        <embed src="1. HTML(구조텍스트목록표).pdf" width="400" height="200">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SfYj5wtUD6o?si=ERJwUmtt1bGWIAH0" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+         clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+         web-share" allowfullscreen></iframe>
+        <iframe src="1. HTML(구조텍스트목록표).pdf" width="400" height="200"></iframe> -->
+    </body>
+</html>

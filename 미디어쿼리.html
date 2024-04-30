@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>미디어쿼리</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        img{
+            width: 300px;
+            height: 250;
+        }
+        body{
+            background: rgb(9, 100, 160);
+        }
+        #container{
+            width: 320px;
+            margin: 50px auto;
+        }
+        .card{
+            width: 300px;
+            height: 500px;
+            background-color: #fff;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .words{
+            width: 300px;
+            position: absolute;
+            top: 300px;
+            text-align: center;
+            padding: 20px;
+        }
+        @media screen and (min-width: 768px){
+            img{
+                width:300px;
+                height: 250px;
+            }
+            #container{
+                width: 570px;
+                margin: 50px auto;
+            }
+            .card{
+                width: 550px;
+                height: 250px;
+                background: #fff;
+                margin: 20px 10px;
+                position: relative;
+            }
+            .words{
+                width: 250px;
+                position:absolute;
+                left:300px;
+                top:50px;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 1720px){
+            img{
+                width:300px;
+                height: 250px;
+            }
+            #container{
+                width: 1710px;
+                margin: 50px auto;
+            }
+            .card{
+                float: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="card">
+            <img src="img/푸바오.jpg">
+            <div class="words">
+                <h2>일 분 전만큼 먼 시간은 없다.</h2>
+                <h3>- Jim Bishop</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/레드향.jpg">
+            <div class="words">
+                <h2>웃음은 마음의 조깅이다.</h2>
+                <h3>-Norman Cousins</h3>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/블루베리.jpg">
+            <div class="words">
+                <h2>낡은 옷은 그냥 입고 새 책을 사라.</h2>
+                <h3>-Austin Phelps</h3>
+            </div>
+    </div>
+    
+</body>
+</html>

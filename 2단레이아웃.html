@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        p{
+            color: rgb(19, 138, 19);
+            font-weight: 700;
+        }
+        #container{
+            width: 960px;
+            border: 1px;
+            padding: 20px;
+            margin: - auto;
+        }
+        header{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        section{
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 620px;
+            float: left;
+            margin-bottom: 20px;
+        }
+        aside{
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 220px;
+            float: right;
+            margin-bottom: 20px;
+            background: #ddd;
+            }
+        footer{
+            clear:both;
+            border:1px solid #ccc;
+            padding:10px;       
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <p> - container : 테두리1, 너비 960, 안여백 20, 화면 중앙에 위치<br>
+                - header: 테두리1 안여백10px, 아래 요소와 간격 20px
+            </p>
+            <h1>사이트 제목</h1>
+        </header>
+        <section>
+            <h2>본문</h2>
+            <h4>내용 입력1</h4>
+            <h4>내용 입력2</h4>
+            <p> 테두리1, 너비 620, 안여백 20, 왼쪽으로 플로팅<br>
+            안여백 20px, 왼쪽으로 플로팅.<br>
+            아래요소와 간격 20px</p>
+        </section>
+        <aside>
+            <h2>사이드 바</h2>
+            <h4>광고1</h4>
+            <h4>광고2</h4>
+            <p>테두리 1px, 너비 220px, 안여백 20px, 오른쪽으로 플로팅, 아래요소와 간격 20px, 배경색</p>
+        </aside>
+        <footer>
+            <h2>푸터</h2>
+            <h4>저작권 정보, 연락처 등</h4>
+            <p>테두리 1px, 양쪽 플로팅 해제, 안여백 10px</p>
+        </footer>
+    </div>
+    
+</body>
+</html>

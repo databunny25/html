@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h1>객체(object)</h1>
+    <script>
+        // 객체 : 다양한 자료를 저장할 수 있는 자료형
+        // 객체변수 = {키(key) : 값(value)}
+        // 객체 내부의 this : 객체자신을 의미
+
+        let stu = {
+            name : "hong",
+            age : 17,
+            score : 99,
+            array : [1, 2, 3, 4],
+            sungjuk : function(grade){
+                console.log(`${this.name}의 성적은 ${this.score} ${grade}입니다`);
+            }
+        }
+
+        console.log(stu.name);
+        console.log(stu.age);
+        console.log(stu);
+        console.log(stu.sungjuk("A"));
+        console.log(stu.array[0]);
+
+        // * for ~ in : 객체 자신의 key값을 가져오는 반복문
+        for(let key in stu){
+            console.log(`객체 stu : ${key} : ${stu[key]}`);
+        }
+
+        // key in 객체 : 객체 안에 key가 있나요? true / false
+        console.log('age' in stu);
+        console.log('job' in stu);
+
+        // 객체 속성 추가, 삭제
+        stu.kor = 100;
+        console.log(stu);
+        delete (stu.kor);
+        console.log(stu);
+
+        // 생성자 함수 : 객체(인스턴스)를 만드는 함수
+        // this : 생성된 객체(인스턴스)를 의미
+
+        function Student(name, kor, eng, mat){
+            this.name = name,
+            this.kor = kor,
+            this.eng = eng,
+            this.mat = mat
+        }
+
+        Student.prototype.sum = function(){
+            return this.kor + this.eng + this.mat;
+        }
+        Student.prototype.avg = function(){
+            return this.sum() / 3;
+        }
+
+        // 인스턴스
+        let hong = new Student('hong', 90, 50, 100);
+        let sung = new Student('sung', 88, 77, 99);
+        console.log(`${hong.name} : ${hong.sum()} : ${hong.avg()}`);
+        console.log(`${sung.name} : ${sung.sum()} : ${sung.avg()}`);
+
+        console.log(hong instanceof Student);
+        console.log(sung instanceof Student);
+
+        // 삼겹살(객체) 가격을 리턴하는 생성자 함수
+        // Product 생성자 함수
+
+        // Product.prototype 가격게산 메소드
+        
+        // 삼겹살 객체 생성
+        // 삼겹살 가격 출력
+    </script>
+</body>
+</html>

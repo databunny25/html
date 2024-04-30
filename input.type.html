@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>input type</title>
+    <style>
+        #container{
+            width: 700px;
+            margin: 0 auto;
+        }
+        .labelsize label{
+            display: inline-block;
+            width: 120px;
+        }
+        .redText{
+            color:red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form name="input-type" method="post" action="aaa.jsp">
+            <fieldset>
+                <label for="user_id">아이디:</label>
+                <input type="text" id="user_id" name="user_id">
+                <label for="user_pw">비밀번호:</label>
+                <input type="password" id="user_pw" name="user_pw">
+                <button type="button">로그인</button>
+            </fieldset>
+            <fieldset class="labelsize">
+                <legend>
+                    개인 정보
+                </legend>
+                <ul>
+                    <li>
+                        <label for="u_id">아이디:<span class="redText">*</span></label>
+                        <input type="text" id="u_id" name="u_id" size="10">                        
+                    </li>
+                    <li>
+                        <label for="u_pw">비밀번호:<span class="redText">*</span></label>
+                        <input type="password" id="u_pw" name="u_pw">
+                    </li>
+                    <li>
+                        <label for="pw_confirm">비밀번호 확인:<span class="redText">*</span></label>
+                        <input type="password" id="pw_confirm" name="pw_confirm">
+                    </li>
+                    <li>
+                        <label for="u_name">이름:<span class="redText">*</span></label>
+                        <input type="text" id="u_name" name="u_name" size="10">
+                    </li>
+                    <li>
+                        <label for="email">메일 주소:<span class="redText">*</span></label>
+                        <input type="email" id="email" name="emial" size="20">
+                    </li>
+                    <li>
+                        <label for="u_home">홈페이지 주소:</label>
+                        <input type="url" id="u_home" name="u_home">
+                    </li>
+                    <li>
+                        <label for="post_number">우편번호:</label>
+                        <input type="text" id="post_number" name="post_number" size="3">
+                        -
+                        <input type="text" id="post_number" name="post_number" size="3">
+                        <button type="button">우편번호 검색</button>
+                    </li>
+                    <li>
+                        <label for="u_address">집주소:</label>
+                        <input type="text" id="u_address" name="u_address" size="40">                        
+                    </li>
+                    <li>
+                        <label for="u_tel">연락처:</label>
+                        <input type="tel" id="u_tel" name="u_tel">                        
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <label id="search">검색:</label>
+                <input type="search" id="search" name="search">
+                <button type="button">검색</button>
+                <button type="button">다시입력</button>
+                
+            </fieldset>
+            <fieldset>
+                <legend>등록 정보</legend>
+                <ul>
+                    <li>
+                        <label for="p_number">참여인원(최대10명):</label>
+                        <input type="number" min="0" max="10" step="1" value="1" id="p_number" name="p_number">
+                    </li>
+                    <li>
+                        <label for="p_box">지원물품(1인당 5개):</label>
+                        <input type="number" min="5" max="50" step="5" value="1" id="p_box" name="p_box">
+                    </li>
+                    <li>
+                        <label for="range">희망단계(상,중,하)</label>
+                        <input type="range" min="1" max="3" step="1" value="1" id="range" name="range" >
+                    </li>
+                    <li>
+                        <label for="file">첨부파일 선택:</label>
+                        <input type="file" id="file" name="file">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>수강 과목을 선택하세요(1과목 선택 가능)</legend>
+                <ul>
+                    <li>
+                        <label id="color">선호색상</label>
+                        <input type="color" value="#00ff00">
+                    </li>
+                    <li>
+                        신청 과목(회화)</label>
+                        <input type="radio" name="subject" value="basic" checked>영어회화(초급)
+                        <input type="radio" name="subject" value="intermediate">영어회화(중급)
+                        <input type="radio" name="subject" value="hard">영어회화(고급)
+                    </li>
+                    <li>
+                        <label>관심분야는?(다수선택)</label>
+                        <input type="checkbox" name="interest" value="Twitter" checked>Twitter
+                        <input type="checkbox" name="interest" value="Facebook">Facebook
+                        <input type="checkbox" name="interest" value="instagram">instagram
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <input type="submit" value="전송">
+                <input type="reset" value="취소">
+                
+            </fieldset>
+        </form>
+
+    </div>
+</body>
+</html>

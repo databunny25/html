@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 주문서</title>
+    <sytle>
+        #container{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </sytle>
+</head>
+<body>
+    <div id="container">
+        <form name="order" method="post" action="aaa.jsp">
+            <h1>상품 주문서</h1>
+            <fieldset>
+                <legend>개인 정보</legend>
+                <ul>
+                    <li><label for="u_name">이름</label>
+                    <input type="text" id="u_name" name="u_name" placeholder="여백없이 입력"></li>
+                    <li><label for="u_tel">연락처</label>
+                    <input type="tel" id="u_tel" name="_tel" placeholder="연락가능한 번호"></li>                    
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>배송지 정보</legend>
+                <ul>
+                    <li><label for="adderss">주소</label>
+                    <input type="text" id="address" name="address"></li>
+                    <li><label for="tel">전화번호</label>
+                    <input type="tel" id="tel" name="tel"></li>
+                    <li><label>메모</label>
+                    <textarea rows="5" cols="30" name="memo"></textarea></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li><input type="checkbox" id="fruit_check" name="fruit_check" value="k_melon">경북성주 참외(5kg)
+                    <input type="text" id="fruit" name="fruit" value="0" >Box</li>
+                    <li><input type="checkbox" id="fruit_check" name="fruit_check" value="k_melon">경북성주 참외(5kg)
+                    <input type="text" id="fruit" name="fruit" value="0" >Box</li>
+                    <li><input type="checkbox" id="fruit_check" name="fruit_check" value="k_melon">경북성주 참외(5kg)
+                    <input type="text" id="fruit" name="fruit" value="0" >Box</li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

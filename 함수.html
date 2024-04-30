@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+</head>
+<body>
+    <h1>함수</h1>
+    <script>
+        //함수 : 미리 만들어진 수식 덩어리
+        //재사용 하기 위해 사용
+        //구조 : function 함수이름(매개변수){코드}
+        //함수실행(호출) : 함수명(인수:데이터)
+
+        //s에서 n까지 합을 구하는 함수 선언
+
+     
+
+        // 사용자 함수 선언 - 이름이 있는 함수
+        function sum(s,n){
+            let result = 0;
+            for(let i = s; i <= n ; i ++){
+                result += i;
+            }
+            return result; 
+        }
+
+        
+        // 사용자 익명 함수
+        let sum2 = function(s,n){
+            let result = 0;
+            for(let i = s; i <= n ; i ++){
+                result += i;
+            }
+            return result; 
+        }
+
+
+        //함수 실행(호출)
+        console.log(sum(1,10));
+        console.log(sum(1,100));
+        console.log(sum(1, 10, 15));
+
+
+        //자리배치 함수 선언
+            //함수 선언
+            function seatLayout(inwon, colNum){
+                //자리배치 코드
+                    //줄수 계산
+                    let rowNum = Math.floor(inwon / colNum);
+                    if( inwon % colNum != 0) rowNum++;
+                    
+                    //자리 번호                
+                    let seatNum = 0;
+                    document.write(`<table border="1">`);                    
+                    for(let i = 0 ; i < rowNum ; i++){
+                        document.write(`<tr>`);
+                        for (let j = 1 ; j <= colNum ; j++){
+                            //자리번호
+                            seatNum = i* colNum + j;
+                            //자리번호가 인원수 보다 크면 종료            
+                            if(seatNum > inwon) break;
+                            document.write(`<td>좌석 ${seatNum}</td>`);
+                        }
+                        document.write(`</tr>`);
+                    }
+                    document.write(`</table>`);
+                    document.write(`<br>`);
+                 //리턴 없음 : 함수안에서 처리완료
+                }
+        // 함수 실행(호출)     
+        seatLayout(10,4);
+        seatLayout(50,3);
+
+        //콜백함수 : 함수의 매개값으로 들어가는 함수
+        function callTen(callback){
+            for (let i = 1 ; i <= 10; i++){
+                callback();
+            }            
+        }
+             
+        function print(){
+            console.log(`함수호출`);
+        }
+
+        callTen(print);
+
+
+        //함수를 값으로 리턴
+        function resultFunc(){
+            return function plus(){
+                let sum = 0;
+                for( let i=1 ; i <= 100 ; i++){
+                    sum += i;                                 
+                    
+                }
+                console.log(`1에서 100까지 합 $ {sum}`);
+            }
+        }
+        
+        resultFunc()();
+
+
+        // 클로저 : 실행이 종료된 지역변수를 사용하기 위한 것
+        // 방법 : 함수에 넣어서 리턴
+        // 사용 : 리턴된 함수를 통해서만 가능 - 변수 보호(값 임의로 변경불가) 
+        function outFunc(name){
+            let output = "hello " + name;
+            return function(){
+                return output;
+            
+            }
+        }
+
+        let closure = outFunc("hong");
+        console.log(closure());
+
+
+        //변수의 스코프
+        var a=1;
+        var b=5;
+        
+        function outfunc(){
+            function innerfunc(){
+                a=b;
+            }
+            console.log(a);
+
+            a=3;
+            b=4;
+            innerfunc();
+            console.log(a);
+            var b=2; console.log(b);
+        }
+
+        outfunc(); console.log(b);
+
+
+
+
+        //주말에 꼭 해결!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        // 도전문제1 : min ~ max 합을 구하는 함수 선언
+        //함수 선언
+
+
+
+        function sum(min, max){
+            //합구하기
+            let sum = 0;
+            for(let i= min; i <= max; i++){
+                sum += 1;
+            }
+
+            return sum;
+        }
+
+        //함수호출
+        console.log(`합 = ${sum(5, 10)}`);
+
+
+        //도전문제2 : 이름, 국어, 영어, 수학 데이터를 넘겨 받아 성적을 처리하는 함수 만들기
+
+        function sungjuk(name, kor, eng, math){
+            
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

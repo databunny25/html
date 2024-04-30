@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표</title>
+        <style>
+            table{
+                width: 70%;
+                border:1px solid black;
+                border-collapse: collapse;
+                /* border-spacing: 10px 10px; */
+                text-align: center;
+            }
+            th,td{
+                border:1px dotted #f00;
+                padding: 5px 10px;
+            }
+            .heading{
+                background: #eee;
+            }
+            tfoot{
+                background:rgb(119, 229, 248);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>표 작성</h2>
+        <table>
+            <caption>표제목</caption>
+            <colgroup>
+                <col class="heading">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr class="heading">
+                    <th>필드명1</th>
+                    <th>필드명2</th>
+                    <th>필드명3</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td rowspan="2">data1</td>
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+            <tr>
+                
+                <td>data2</td>
+                <td>data3</td>
+            </tr>
+            <tr>
+                <td>data1</td>
+                <td>data2</td>
+                <td>data3</td> 
+            </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                <td colspan="3">통계자료</td>
+                </tr>
+            </tfoot>
+        </table>
+        <table>
+            <caption>요안도라 객실</caption>
+            <thead>
+                <tr>
+                    <th>방 이름</th>
+                    <th>대상</th>
+                    <th>크기</th>
+                    <th>가격</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>유채방</td>
+                    <td>여성 도미토리</td>
+                    <td rowspan="3">4인실</td>
+                    <td rowspan="4">1인 20,000원</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">동백방</td>
+                    <td>동성 도미토리</td>
+                </tr>
+                <tr>
+                    <td>가족 1팀</td>
+                </tr>
+                <tr>
+                    <td>천혜향방</td>
+                    <td>-</td>
+                    <td>2인실</td>
+                </tr>
+            </tbody> 
+            <tfoot>
+                <tr>
+                    <td colspan="4">바깥채 전체를 렌트합니다</td>
+                </tr>
+            </tfoot></tboot>
+        </table>
+        <h2>상품 구성</h2>
+        <table>
+            <caption>선물용과 가정용 상품 구성</caption>
+            <colgroup>
+                <col style="background: #aaa;">
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <th>용도</th>
+                <th>중량</th>
+                <th>개수</th>
+                <th>가격</th>
+            </tr>
+            <tr>
+                <th rowspan="2">선물용</th>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>35,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>52,000원</td>
+            </tr>
+            <tr>
+                <th rowspan="2">가정용</th>
+                <td>3kg</td>
+                <td>11~16과</td>
+                <td>30,000원</td>
+            </tr>
+            <tr>
+                <td>5kg</td>
+                <td>18~26과</td>
+                <td>47,000원</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도전1</title>
+    <style>
+        div{
+            width: 90px;
+            border: 1px solid #ccc;
+            padding: 10px 30px 10px 40px;
+            margin: 10px;
+            display: inline-block;
+            background: #eee;
+        }
+        h3{
+            margin-bottom: 10;
+        }
+        table{
+            /* border: 1px solid #ccc; */
+            border-collapse: collapse;
+        }
+        td{
+            border: 1px solid #fff;
+            padding: 20px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>도전문제</h1>
+    <script>
+        //도전1 : 1~100 홀수합, 짝수합
+
+        //내가 함
+        let odd = 0, even = 0;
+        let fivesum = 0;
+        1
+        for(let i = 1 ; i <= 100 ; i++ ){
+            if( i % 2 == 1){
+                odd += i;
+            }else{
+            even += i;
+            }
+
+            if( i % 5 == 0){
+                fivesum += i;
+            }
+
+        }
+
+        console.log(`1부터 100까지 홀수 합 : ${odd} , 짝수 합 : ${even}`);
+
+
+        //도전2
+        
+        
+        
+        for( i = 1; i <= 100; i ++){
+            if( i % 5 == 0 ) fivesum += i;
+        }
+
+        console.log(fivesum);
+
+
+        //도전3 팩토리얼
+        
+        
+        // let fact = 1;
+        // let input = Number(prompt("팩토리얼 값입력", "0"));
+        
+
+        // for(let i = 1; i <= input; i++){
+        //     fact * i;
+        // }
+        
+        // console.log(`${input}! = ${fact}`);
+        
+        
+        //도전4
+
+        for(let dan = 2; dan < 10; dan++){
+            document.write('<div>')
+            document.write(`<h3>= ${dan}단 =</h3>`);
+            for( let j=1; j<10; j++){
+                document.write(`${dan} x ${j} = ${dan * j}<br>`)
+            }
+            document.write(`<br>`)
+            document.write('</div>')
+        }
+
+        //도전5
+        let num = prompt("숫자를 입력하세요", "");
+        
+        if(num != null){
+            if(num % 4 == 0){
+                console.log(`4의 배수입니다`);
+            }else{
+                console.log(`4의 배수가 아닙니다`);
+            }
+            
+        }
+        
+
+
+        //도전6 --------------------덜했당
+        let numfor3 = "";
+        let count = 0;
+        
+        for( let i = 1; i <= num; i ++){
+            if(num % 3 == 0){
+                console.log(`${num}까지의 3의 배수는`)
+            }
+        }
+        
+
+        //도전7 자리배치
+        
+        let inwon = 29; //입장객수
+        let colNum = 3; //한 줄에 몇명?
+        let seat = 0; //자리번호 
+        //몇 줄이 필요?
+        let rowNum = Math.floor(inwon/colNum);
+        if( inwon % colNum !== 0){
+            rowNum++;
+        }
+
+        //자리배치 = 이중 반복문
+        document.write(`<table>`);
+        for( let i = 0 ; i < rowNum ; i++ ){
+            document.write(`<tr>`);
+            for( let j = 1 ; j <= colNum ; j++ ){
+                seat = i* colNum + j; //자리번호
+                if(seat > inwon) break; //자리번호와 인원수 비교
+                document.write(`<td>좌석 ${seat}</td>`); //자리출력
+
+            }
+            document.write(`</tr>`);
+            
+        }
+        document.write(`</table>`);
+        
+
+
+        // 다이아몬드 별찍기
+        // 문서에 출력 - 공백이 하나 인식
+        // 공백 : &nbsp; 
+        
+        let stars = "";
+        
+
+        //위쪽 피라미드
+        //행수
+        for(let i = 1 ; i <= 5 ; i ++){
+            //공백수(5-행수)
+            for(let b = 1 ; b <= 5-i ; b++){
+                stars += "&nbsp"; //stars = stars + " " : 누적변수
+            }
+            // 별수(2 * 행수 -1)
+            for(let s = 1; s <= 2 * i -1 ; s++){
+                stars += "*";
+            }
+            stars += "<br>";
+        }
+          
+        //아래쪽 뒤집힌 피라미드
+        for(let i = 4 ; i >= 1 ; i --){
+            //공백수(5-행수)
+            for(let b = 1 ; b <= 5-i ; b++){
+                stars += "&nbsp"; //stars = stars + " " : 누적변수
+            }
+            // 별수(2 * 행수 -1)
+            for(let s = 1; s <= 2 * i -1 ; s++){
+                stars += "*";
+            }
+            stars += "<br>";
+        }
+
+        //출력
+        // console.log(stars);
+        document.write(stars);
+
+    </script>
+
+
+    
+</body>
+</html>
